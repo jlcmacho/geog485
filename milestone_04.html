@@ -15,10 +15,7 @@
         var mapOptions = {
           center: new google.maps.LatLng(40.829337, -73.927676),
           zoom: 17
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-        var stylesArray = [ 
+                styles = [ 
 { 
 "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ 
 	{ "visibility": "on" }, 
@@ -45,9 +42,12 @@
      ] 
    }
 ]
-</script>
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+  </script>
+  </head>
 <body>
 <div id="map-canvas"/>
 </body>
-</head>
 </html>

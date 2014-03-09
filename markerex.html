@@ -15,7 +15,13 @@
   <div id="map" style="width: 500px; height: 400px;"></div>
 
   <script type="text/javascript">
- 
+       function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(40.829337, -73.927676),
+          zoom: 17,
+          styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
+
+        };
       
     var locations = [
       ['Yankee Stadium', 40.829337, -73.927676, 2],

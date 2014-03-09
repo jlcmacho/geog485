@@ -16,11 +16,7 @@
           center: new google.maps.LatLng(40.829337, -73.927676),
           zoom: 17,
           styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
-var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    title:"Yankee Stadium"
-});
+
         };
          var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);

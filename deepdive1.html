@@ -24,12 +24,14 @@ function initialize() {
      styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
      
   };
-  var markers = [
+ 
+var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  var map = new 
+ var markers = [
     ['Yankee Stadium',40.829337, -73.927676 ],
     ['Heritage Field', 40.826860, -73.927899]
     ];
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+google.maps.Map(document.getElementById("map_canvas"),myOptions);
     var infowindow = new google.maps.InfoWindow(), marker, i;
     for (i = 0; i < markers.length; i++) {  
         marker = new google.maps.Marker({
@@ -44,3 +46,6 @@ function initialize() {
         })(marker, i));
     }
 }
+</script>
+</body>
+</html>

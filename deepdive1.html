@@ -1,5 +1,4 @@
-
-
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -9,36 +8,24 @@
       #map-canvas { height: 100% }
     </style>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvQ1Eu0HRyr4fBswhu-mYqg7mZvC1jSAU&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyL9Ul2sDQRBI7FINyl1ljqoUUJe5v9Nk&sensor=false">
     </script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(40.829337, -73.927676),
-          zoom: 17
+          zoom: 17,
+          styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
+
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
+         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    </script>;
   </head>
-  <body>
-    <div id="map-canvas"/>
-  </body>
-  [ { "featureType": "water", "elementType": "geometry", "stylers": [ { "visibility": "on" }, { "color": "#0e26f1" }, { "hue": "#0008ff" } ] },{ "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "color": "#8278f8" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#fd2818" } ] } ]
+<body>
+<div id="map-canvas"/>
+</body>
 </html>
-
-    Status
-    API
-    Training
-    Shop
-    Blog
-    About
-
-    © 2014 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Contact
 

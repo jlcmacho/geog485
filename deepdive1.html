@@ -23,22 +23,15 @@ function initialize() {
   };
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 var markers = [
-    ['Bondi Beach', -33.890542, 151.274856],
-    ['Coogee Beach', -33.923036, 151.259052],
+    ['Yankee Stadium',40.829337, -73.927676 ],
+    ['Heritage Field', 40.826860, -73.927899],
     ['Cronulla Beach', -34.028249, 151.157507],
     ['Manly Beach', -33.80010128657071, 151.28747820854187],
     ['Maroubra Beach', -33.950198, 151.259302]
 ];
 
 
-function initializeMaps() {
-    var latlng = new google.maps.LatLng(-33.92, 151.25);
-    var myOptions = {
-        zoom: 10,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false
-    };
+
     var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
     var infowindow = new google.maps.InfoWindow(), marker, i;
     for (i = 0; i < markers.length; i++) {  

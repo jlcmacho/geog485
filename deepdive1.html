@@ -12,8 +12,12 @@
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvQ1Eu0HRyr4fBswhu-mYqg7mZvC1jSAU&sensor=false"></script>
- <script type="text/javascript">
-    // Define your locations: HTML content for the info window, latitude, longitude
+    <script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(40.829337, -73.927676);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatlng,
     var locations = [
       ['<h4>Yankee Stadium</h4>', 40.829337, -73.927676],
       ['<h4>Heritage Field</h4>', 40.826860, -73.927899]

@@ -35,11 +35,11 @@ function initialize() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
-      center: new google.maps.LatLng(-33.92, 151.25),
+      center: new google.maps.LatLng(),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    var infowindow = new google.maps.InfoWindow();
+    var infowindow = new google.maps.InfoWindow(40.829337, -73.927676);
 
     var marker, i;
 

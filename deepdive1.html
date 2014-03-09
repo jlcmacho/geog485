@@ -1,30 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 100% }
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Yankee Stadium</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
     </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvQ1Eu0HRyr4fBswhu-mYqg7mZvC1jSAU&sensor=false">
-    </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(40.829337, -73.927676),
-          zoom: 17,
-          styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
-
-        };
-         var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-      };
-    </script>;
-  </head>
-<body>
-<div id="map-canvas"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvQ1Eu0HRyr4fBswhu-mYqg7mZvC1jSAU&sensor=false"></script>
+    <script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(40.829337, -73.927676);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatlng,
+     styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
+     
+  };
+ 
+<script type="text/javascript">
+var locations = [
+['Yankee Stadium', 40.829337, -73.927676 1],
+['Maroubra Beach', 40.826860, -73.927899 2]
+];
+ 
+var map = new google.maps.Map(document.getElementById('map'), {
+zoom: 10,
+center: new google.maps.LatLng(40.829337, -73.927676),
+mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+ 
+var infowindow = new google.maps.InfoWindow();
+ 
+var marker, i;
+var markers = new Array();
+ 
+for (i = 0; i < locations.length; i++) {
+marker = new google.maps.Marker({
+position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+map: map
+});
+ 
+markers.push(marker);
+ 
+google.maps.event.addListener(marker, 'click', (function(marker, i) {
+return function() {
+infowindow.setContent(locations[i][0]);
+infowindow.open(map, marker);
+}
+})(marker, i));
+}
+ 
+function AutoCenter() {
+// Create a new viewpoint bound
+var bounds = new google.maps.LatLngBounds();
+// Go through each...
+$.each(markers, function (index, marker) {
+bounds.extend(marker.position);
+});
+// Fit these bounds to the map
+map.fitBounds(bounds);
+}
+AutoCenter();
+ 
+</script>
 </body>
 </html>
-

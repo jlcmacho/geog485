@@ -15,15 +15,17 @@
       ['Heritage Field', 40.826860, -73.927899, 1]
      
     ];
-  styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
-
-        };
+  
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 14,
       center: new google.maps.LatLng(40.829337, -73.927676),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+    
+    styles:[ { "featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [ { "visibility": "on" }, { "color": "#8080ff" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#80eb83" } ] },{ "featureType": "road", "elementType": "geometry.fill", "stylers": [ { "color": "#80807f" } ] },{ "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "hue": "#ff1100" }, { "color": "#fb0b0b" } ] } ]
+
+        };
 
     var infowindow = new google.maps.InfoWindow();
 

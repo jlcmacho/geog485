@@ -22,17 +22,34 @@
 
 <p></p>3.Santa Fe County Landsat Mosaic, 2011- This is a raster data set and is imagery from the landsat satellite. This data was posted on the website on 8/27/2012. Metadata is provided in both xml and html. The preview provides boundaries of where the image is from. This is an img file. The service provided are wms and wcs. </p>
 
-	<h2>Examine each file using either gdalinfo or ogrinfo (depending upon whether it is a raster or vector data product), and answer the following questions about each data set:</h2>
-	<p>answer</p>
-	<h2>What is the projection/coordinate system for the data product? If it is undefined, note it.</h2>
-	<p>answer</p>
-	<h2>What is the spatial extent (i.e. bounding box) of the data product?</h2>
-	<p>Answer</p>
-	<h2>If it is a vector dataset, how many features does it have?</h2>
-	<h2>If it is a raster dataset, what is the pixel resolution (include units) of the dataset?</h2>
-	<p>Answer</p>
+<h2>What is the projection/coordinate system for the data product? If it is undefined, note it.</h2>
+
+<p>Santa Fe Landsat image Projection UTM, Zone 13 Spheroid WGS 84, Datum WGS 84</P>
+
+<p> Hospital vector data: Projection GCS_WGS_1984 </p>
+
+<p> 2010 Census Data: Projection "GCS_WGS_1984",
+    DATUM WGS_1984       </p>
+
+<h2> What is the spatial extent (i.e. bounding box) of the data product? </h2>
+
+<p> Santa Fe Landsat image: Upper Left  (  386397.730, 3984731.584) (106d15'37.57"W, 36d 0'1.58"N)
+Lower Left  (  386397.730, 3877811.584) (106d14'43.64"W, 35d 2'11.79"N)
+Upper Right (  435417.730, 3984731.584) (105d42'59.77"W, 36d 0'17.71"N)
+Lower Right (  435417.730, 3877811.584) (105d42'29.10"W, 35d 2'27.36"N)
+Center      (  410907.730, 3931271.584) (105d58'57.32"W, 35d31'15.77"N) </p>
+<p> Hospital vector data: (-108.810075, 31.842246) - (-103.184921, 36.862644)</p>
+<p> New Mexico Census data: (-109.049170, 31.783148) - (-103.043560, 37.000020)  </p>
+
+<h2> If it is a vector dataset, how many features does it have? </h2>
+<p> The hospital data set has 55 features </p>
+<p> The census data set has 443 features </p>
+
+<h2> If it is a raster dataset, what is the pixel resolution (include units) of the dataset? </h2>
+
+<p> The pixel resolution for the Santa Fe image is (30.000000000000000,-30.000000000000000) </p>
 	
-    <h2>Use proj or cs2cs (I suggest you use cs2cs) to calculate the coordinates of the spatial extent of the datasets that you downloaded in UTM Zone 13N, NAD27. Paste the input and output of the command(s) into your writeup.  </h2>	
+<h2>Use proj or cs2cs (I suggest you use cs2cs) to calculate the coordinates of the spatial extent of the datasets that you downloaded in UTM Zone 13N, NAD27. Paste the input and output of the command(s) into your writeup.  </h2>	
 		
 	</body>
 	

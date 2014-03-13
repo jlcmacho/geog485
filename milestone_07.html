@@ -4,7 +4,7 @@
 <p><a href="http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/
 services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&
 LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&
-SRS=EPSG:4326&WIDTH=200&HEIGHT=200"</a></p>
+SRS=EPSG:4326&WIDTH=200&HEIGHT=200"></a></p>
  	
 <p>this request results in a map image that does not agree with the standard shape of Bernalillo county (depicted in the Google Map below) that we are accustomed to, regardless of the specific map projection being used.</p>
  
@@ -21,7 +21,7 @@ SRS=EPSG:4326&WIDTH=200&HEIGHT=200"</a></p>
 <p><a href="http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/
 services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&
 LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&
-SRS=EPSG:4326&WIDTH=200&HEIGHT=92"</a></p>
+SRS=EPSG:4326&WIDTH=200&HEIGHT=92"></a></p>
  
 <p>This process may be reversed to request images of a fixed size for use in a client interface, with the requested BBOX modified to match the aspect ratio of the target image. If, for example, images are being requested for a client interface with a fixed map size of 600x400 pixels, a corresponding BBOX can be derived using the same calculation.</p>
 <p>If, for example, the area of interest for a map is 2 degrees wide, we can calculate the target height (in degrees) using the aspect ratio of the desired image.</p>
@@ -34,7 +34,7 @@ SRS=EPSG:4326&WIDTH=200&HEIGHT=92"</a></p>
 <p><a href="http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/
 services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-108,34.7,-106,36.0333&
 LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&
-SRS=EPSG:4326&WIDTH=600&HEIGHT=400"</a></p>
+SRS=EPSG:4326&WIDTH=600&HEIGHT=400"></a></p>
  
 <p>Given that McKinley County NM is contained within the following BBOX: -109.5, 34.5, -106.5, 36.5</p>
 <p>Question 1</p>
@@ -45,12 +45,12 @@ SRS=EPSG:4326&WIDTH=600&HEIGHT=400"</a></p>
 <p>H is 600/2.33= 257.5</p>
 <p>Question 3</p>
 <p>Formulate a WMS request that reflects the values determined in 1.1 and 1.2 above for the WMS service used above in the examples. Include in your answer both the actual WMS request and the returned map image.</p>
-<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.1,34.5,-107.0,35.4&LAYERS=2007fe_35_county00&WIDTH=600&HEIGHT=257&SRS=EPSG:4326&FORMAT=jpeg&STYLES="</a></p>
+<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.1,34.5,-107.0,35.4&LAYERS=2007fe_35_county00&WIDTH=600&HEIGHT=257&SRS=EPSG:4326&FORMAT=jpeg&STYLES="></a></p>
 <p>picture</p>
 
 <p>Question 4</p>
 <p>Formulate a WMS request for a 900x600 pixel map image that represents the full 3-degree width of the geographic region, and is based upon the minimum Y value of 34.5 degrees North Latitude. Include in your answer both the WMS request and the returned map image.</p>
-<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.1,34.5,-107.0,35.9&LAYERS=2007fe_35_county00&WIDTH=900&HEIGHT=600&SRS=EPSG:4326&FORMAT=jpeg&STYLES="</a></p>
+<p><a href="http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-109.1,34.5,-107.0,35.9&LAYERS=2007fe_35_county00&WIDTH=900&HEIGHT=600&SRS=EPSG:4326&FORMAT=jpeg&STYLES="></a></p>
 <p> Picture</p>
 
 <p>Question 5</p>
@@ -59,10 +59,10 @@ SRS=EPSG:4326&WIDTH=600&HEIGHT=400"</a></p>
 <p>for each of the following layers: 0 (TNM_Large_Scale_Imagery) and 1 (1_foot_imagery) - yes - USGS just gave numbers as the layer names</p>
 
 <p><a href="http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/
-MapServer/WMSServer?request=GetCapabilities&service=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMATE=IMAGE/PNG&TRANSPARENT=TRUE&SRS=EPSG:102113&WIDTH=600&HEIGHT=600&STYLES=LAYERS=1"</a></p>
+MapServer/WMSServer?request=GetCapabilities&service=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMATE=IMAGE/PNG&TRANSPARENT=TRUE&SRS=EPSG:102113&WIDTH=600&HEIGHT=600&STYLES=LAYERS=1"></a></p>
 
 <a=href"http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/
-MapServer/WMSServer?request=GetCapabilities&service=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMATE=IMAGE/PNG&TRANSPARENT=TRUE&SRS=EPSG:102113&WIDTH=600&HEIGHT=600&STYLES=LAYERS=0"</a></p>
+MapServer/WMSServer?request=GetCapabilities&service=WMS&VERSION=1.1.1&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&FORMATE=IMAGE/PNG&TRANSPARENT=TRUE&SRS=EPSG:102113&WIDTH=600&HEIGHT=600&STYLES=LAYERS=0"></a></p>
 
 
 <p>Question 6

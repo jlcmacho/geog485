@@ -68,7 +68,12 @@
 
 <p> Include in your answer both the complete WMS GetMap request and the resulting map image that is returned </P>
 
-<p> Answer: http://neowms.sci.gsfc.nasa.gov/wms/wms?version=1.1.1&service=WMS&request=GetMap&SRS=EPSG:4326&FORMAT=image/jpeg&STYLES=&LAYERS=MOD_LSTD_CIM_M=</p>
+<p> Answer: http://neowms.sci.gsfc.nasa.gov/wms?version=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=90.0,180.0,-90.0,-180.0&LAYERS=MOD_LSTD_CLIM_M&WIDTH=1200&HEIGHT=640&SRS=EPSG:4326&FORMAT=IMAGE/PNG&STYLES=</p>
+<p> I didnt get a corresponding request but here is my math that I used to calculate the aspect ratio and the Height</p>
+<p>-62--128=62 degrees   54.5-21.5=33 degrees
+<p>62/33</p>
+<p>aspect ratio=1.88</p>
+<p>height=1200/1.88=1200X638.29</p>
 
 <h2> Question 6 From the XML GetCapabilities returned by the following WFS request answer the following questions </h2>
 <p> What is the title for this service? </p>
@@ -101,7 +106,7 @@
 <p> Answer: -122.59346771240234 37.45548629760742 -122.0468978881836 38.13872528076172 </p>
 
 <p> 2. What file formats are available for 'V' data delivered by this service?
-<p> Answer:  </p>
+<p> Answer: xml, txt </p>
 
 <p> 3. What SRS(s) are supported by this service for the requested data delivery? </p>
 

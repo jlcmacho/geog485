@@ -26,7 +26,7 @@
   <head>
     <link rel="stylesheet" href="styles/olGoogleStyles.css" type="text/css">
     <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBETooyFNpaSWQ0lqOyqoEWz7Ki8MQIAB4&sensor=false"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBETooyFNpaSWQ0lqOyqoEWz7Ki8MQIAB4sensor=false"></script>
     <script type="text/javascript">
 		// see http://trac.osgeo.org/openlayers/wiki/SphericalMercator for some useful advice on using the Spherical Mercator projection in OpenLayers
 		
@@ -38,7 +38,7 @@
         var zoom = 12;
         var map;
         var gphy, gmap, ghyb, gsat;                    // Google Maps Layers	
-
+        var OSMlayer;                                  // OpenStreetMap Layer
         
         
         // =============== Initialization function ===================
@@ -74,10 +74,22 @@
             );
 
             map.addLayers([gphy, gmap, ghyb, gsat]);
+			 // ================= OSM Map ====================
+            OSMlayer = new OpenLayers.Layer.OSM( "Simple OSM Map");
+            map.addLayer(OSMlayer);
 
             
-          
-        // =============== End of Initialization Function ============
+            // Google.v3 uses EPSG:900913 as projection, so we have to
+            // transform our coordinates
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                new OpenLayers.Projection("EPSG:4326"),
+                map.getProjectionObject()
+             ), zoom);
+                
+            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+        }
+		
+		// =============== End of Initialization Function ============
         
     </script>
     <style type="text/css">

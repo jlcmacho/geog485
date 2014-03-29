@@ -44,7 +44,16 @@
 
         // =============== Initialization function ===================
         function init(){
-            map = new OpenLayers.Map( 'map' );
+           // map = new OpenLayers.Map( 'map' );
+		   
+            map = new OpenLayers.Map('map', {
+				projection: 'EPSG:900913',
+				maxExtent: new OpenLayers.Bounds(-20037508, -20037508,
+				20037508, 20037508.34),
+				maxResolution: 156543.0339,
+				units: 'm', 
+				controls: baseControls
+			});
             
             // =========== OSM Map ====================
             layer = new OpenLayers.Layer.OSM( "Open Street Map");
@@ -69,9 +78,17 @@
     <p>Shows the basic use of OpenLayers with the <a href="http://www.openstreetmap.org/">OpenStreetmap</a> basemap</p> 
     <!-- Map DIV -->
     <div id="map"></div>
-   
+
+     <ul>
+		<li>OpenLayers.Control.Navigation</li>
+		<li>OpenLayers.Control.PanZoomBar</li>
+		<li>OpenLayers.Control.LayerSwitcher</li>
+		<li>OpenLayers.Control.Permalink</li>
+		<li>OpenLayers.Control.MousePosition</li>
+	</ul>    
   </body>
 </html>
 </html>
+
 
 

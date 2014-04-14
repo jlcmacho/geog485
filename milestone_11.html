@@ -1,4 +1,3 @@
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <link rel="stylesheet" href="styles/olGoogleStyles.css" type="text/css">
@@ -67,47 +66,20 @@
         }
         
         			// =========== KML Layer Addition ===============
-			Layers.states = new OpenLayers.Layer.Vector("KML - States", {
+			Layers.hospitals = new OpenLayers.Layer.Vector("KML - hospitals", {
                 projection: map.displayProjection,
                 visibility: false,
-                style: myStatesStyle,
+                style: myhospitalsStyle,
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/tl_2010_35_state10.kml",
+                    url: "http://services.google.com/earth/kmz/outreach/regions_brooklyn_hospitals.kmz",
                     format: new OpenLayers.Format.KML({
                         extractAttributes: true
                     })
                 })
             });
-           	map.addLayer(Layers.states)	
-           		
-			Layers.counties = new OpenLayers.Layer.Vector("KML - Counties", {
-                projection: map.displayProjection,
-                visibility: false,
-                style: myCountiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/NMCounties.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.counties)		
-			            
-			Layers.cities = new OpenLayers.Layer.Vector("KML - Cities", {
-                projection: map.displayProjection,
-                visibility: false,
-                style:  myCitiesStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://kkb-web.s3.amazonaws.com/data/NMCities.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.cities)		
+           	
+           	map.addLayer(Layers.hospitals)		
 			            
 			            
 			

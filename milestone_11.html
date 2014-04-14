@@ -66,7 +66,7 @@
         }
         
         			// =========== KML Layer Addition ===============
-	    Layers.hospitals = new OpenLayers.Layer.Vector("KML - hospitals", {
+	    Layers.hospitals = new OpenLayers.Layer.Vector("KML - hospitals"), {
         projection: map.displayProjection,
         strategies: [new OpenLayers.Strategy.Fixed()],
         protocol: new OpenLayers.Protocol.HTTP({

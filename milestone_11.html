@@ -66,26 +66,26 @@
         }
         
         			// =========== KML Layer Addition ===============
-			Layers.hospitals = new OpenLayers.Layer.Vector("KML - hospitals", {
-                projection: map.displayProjection,
-                visibility: false,
-                style: myhospitalsStyle,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://services.google.com/earth/kmz/outreach/regions_brooklyn_hospitals.kmz",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	
-           	map.addLayer(Layers.hospitals)		
+	    Layers.hospitals = new OpenLayers.Layer.Vector("KML - hospitals", {
+        projection: map.displayProjection,
+        strategies: [new OpenLayers.Strategy.Fixed()],
+        protocol: new OpenLayers.Protocol.HTTP({
+            url: "http://services.google.com/earth/kmz/outreach/regions_brooklyn_hospitals.kmz",
+            format: new OpenLayers.Format.KML({
+                extractAttributes: true
+            })
+        })
+    });
+    map.addLayer(Layers.hospitals)
+    
+    map.setCenter(
+                new OpenLayers.LonLat(lon, lat), zoom
+            );
+           			
 			            
 			            
 			
-			map.setCenter(
-                new OpenLayers.LonLat(lon, lat), zoom
-            );
+	
 
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
             map.addControl(new OpenLayers.Control.MousePosition() );
